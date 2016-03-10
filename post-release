@@ -24,7 +24,7 @@ EOF
 dokku_log_verbose "Complete"
 dokku_log_info1 "Saving revision information..."
 
-id=$(echo "$REVISION_INFO" | docker run -i -a stdin $IMAGE /bin/bash -c "cat > /app/.profile.d/revision-info.sh")
+id=$(echo "$REVISION_INFO" | docker run $DOKKU_GLOBAL_RUN_ARGS -i -a stdin $IMAGE /bin/bash -c "cat > /app/.profile.d/revision-info.sh")
 test $(docker wait $id) -eq 0
 docker commit $id $IMAGE > /dev/null
 
