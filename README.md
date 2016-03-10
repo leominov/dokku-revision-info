@@ -25,8 +25,7 @@ dokku plugin:install https://github.com/leominov/dokku-revision-info.git dokku-r
 
 This plugin provides hooks:
 
-* `post-release-buildpack`
-* `post-release-dockerfile`
+* `pre-build-buildpack`
 
 ## Thanks
 
