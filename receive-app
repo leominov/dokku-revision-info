@@ -5,6 +5,8 @@ APP="$1"
 
 [[ ! -d "$DOKKU_ROOT/$APP/refs" ]] && exit 0
 
+dokku_log_info1 "Preparing revision information..."
+
 cd "$DOKKU_ROOT/$APP/"
 cat > .dokku-revision <<EOL
 export REVISION_INFO=true
@@ -14,3 +16,5 @@ export REVISION_HASH='$(git rev-parse --short HEAD)'
 export REVISION_DATE='$(git log -1 --format="%ci")'
 export REVISION_BUILD_DATE='$(date "+%F %H:%M:%S %z")'
 EOL
+
+dokku_log_info1 "Complete"
