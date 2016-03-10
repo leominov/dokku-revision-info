@@ -13,6 +13,7 @@ dokku plugin:install https://github.com/leominov/dokku-revision-info.git dokku-r
 
 # Variables
 
+* REVISION_INFO
 * REVISION_BRANCH
 * REVISION_AUTHOR
 * REVISION_HASH
