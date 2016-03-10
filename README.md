@@ -1,5 +1,6 @@
 # Dokku revision info
-Revision information in your Dokku environment
+
+Revision information in your Dokku environment.
 
 # Requirements
 
