@@ -10,6 +10,7 @@ if [[ ! -d "$DOKKU_ROOT/$APP/refs" ]]; then
   exit 0
 fi
 
+cd "$DOKKU_ROOT/$APP/"
 REVISION_INFO="$(cat <<-EOF
 export REVISION_INFO=true
 export REVISION_BRANCH='$(git branch | sed -n "/^\*/s/^\* //p")'
