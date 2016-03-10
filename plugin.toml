@@ -1,0 +1,4 @@
+[plugin]
+description = "adds revision information in your Dokku environment"
+version = "1.0.0"
+[plugin.config]
