@@ -11,7 +11,6 @@ revision_info_pre_build_buildpack() {
 
   cd "$DOKKU_ROOT/$APP/"
   local REVISION_INFO="$(cat <<-EOF
-export REVISION_INFO=true
 export REVISION_BRANCH='$(git branch | sed -n "/^\*/s/^\* //p")'
 export REVISION_AUTHOR='$(git log -1 --format="%an")'
 export REVISION_HASH='$(git rev-parse --short HEAD)'
